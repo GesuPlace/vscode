@@ -61,7 +61,8 @@ declare module 'vscode' {
 		Folder = 1,
 		Flag = 2,
 		Method = 3,
-		Argument = 4
+		Argument = 4,
+		Alias = 5,
 	}
 
 	export interface TerminalCompletionContext {
@@ -128,5 +129,9 @@ declare module 'vscode' {
 		 * The path separator to use when constructing paths.
 		 */
 		pathSeparator: string;
+		/**
+		 * Environment variables to use when constructing paths.
+		 */
+		env?: { [key: string]: string | null | undefined };
 	}
 }
